@@ -1,0 +1,78 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.login-ul {
+    background: none;
+    color:rgb(22, 68, 218);
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.sign-in{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-bx{
+    margin-top: 40px;
+    display:70%;
+    padding:30px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+.login-btn{
+    padding:7px;
+    background-color: rgb(0, 106, 255);
+}
+
+.email{
+    margin-bottom: 20px;
+}
+
+@media (max-width: 767px){
+    .login-bx{
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+    }
+    .email{
+        margin-left: 200px;
+    }
+    .password{
+        margin-left: 200px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .login-bx{
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+    }
+    .email{
+        margin-left: 200px;
+    }
+    .password{
+        margin-left: 200px;
+    }
+}

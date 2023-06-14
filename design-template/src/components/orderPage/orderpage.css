@@ -1,0 +1,178 @@
+.order{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.orderContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width:48%;
+    padding:10px;
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+   
+}
+.orderContainer  h1{
+    padding: 10px;   
+    color:rgb(0, 106, 255);
+}
+
+.checkoutTitle{
+    margin-left: 130px;
+    color:black;
+}
+.orderContainer h2{
+    font-weight: 500;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.firstBox{
+    margin-right: 210px;
+}
+
+.select-form{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.form-headings{
+    width:200px;
+    font-size: 20px;
+}
+.text-form{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.form-signin{
+    width:200px;
+    background-color: rgb(0, 106, 255);
+    color:#fff;
+    border: none;
+    margin-top: 50px;
+    padding: 10px;
+    font-size: 18PX;
+    margin-left: 190px;
+    cursor: pointer;
+}
+
+.checkout-card{
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+    background-color: #fff;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    width:330px;
+    height:50vh;
+    margin-top: 50px;
+    margin-right: 70px;
+}
+.first-details {
+    text-align: left;
+    padding: 10px;
+    border-bottom:3px solid #000;
+    width: 290px;
+    color: black;
+    font-size: 15px;
+    font-weight: 300;
+}
+.pages-price{
+    padding:10px;
+    display: flex;
+    justify-content: space-between;
+    color:rgb(0, 106, 255);
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+ 
+}
+.total-btn{
+    background-color: rgb(0, 106, 255);
+    color: #fff;
+    padding: 7px;
+    text-align: center;
+    width: 200px;
+    font-size: 15px;
+    border: none;
+    margin-top: 10px;
+    margin-left: 45px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.price{
+    color:#000;
+}
+.card-logo{
+    z-index: 100;
+    width:80px;
+    height:80px;
+}
+.intasend-btn{
+    margin-left: 45px;
+    background: #000;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    width:200px;
+    padding: 7px;
+}
+
+.counter{
+    width:100%;
+    margin-bottom: 10px;
+}
+.pageCount{
+    margin-right: 80px;
+}
+.counterDisplay{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.counter-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .counter-label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .counter-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  
+  .counter-button:hover {
+    background-color: #555;
+  }
+  
+  .counter-value {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  

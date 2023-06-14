@@ -1,0 +1,383 @@
+/*
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+.nav-container {
+    position: sticky;
+    top:0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+font-family: 'Share Tech', sans-serif;
+background-color: #000;
+
+}
+nav h1{
+    font-size: 20px;
+    color: #fff;
+}
+ul {
+  list-style: none;
+}
+.middle-nav {
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 600;
+  align-items: center;
+  margin-right: 0%;
+}
+a {
+    margin-right: 20px;
+    color:#fff;
+    text-decoration: none;
+}
+.social-media{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#000;
+    font-size: 25px;
+}
+
+.end-nav{
+    display: flex;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.hamburger{
+    display: none;
+}
+
+.login-nav a{
+    background-color: #fff;
+    color:#000;
+    padding: 15px 40px 15px 40px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.signup a{
+    color:#000;
+    border: none;
+    background-color: rgb(221, 197, 19);
+    padding: 15px 40px 15px 40px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.nav_toggler div {
+    width:2.5rem;
+    height:0.2rem;
+    margin:0.4rem;
+    background:silver;
+    transition:0.4s ease-in;
+}
+
+.nav_toggler {
+    cursor: pointer;
+    display: none;
+}
+.nav-icon {
+  display: none;
+}
+
+.main-container{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-color:rgba(0,0,0,0.3);
+}
+
+@media screen and (max-width: 960px) {
+    .nav-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #ffdd40;
+  }
+}
+
+@media (max-width: 767px){
+    .nav_toggler{
+        display: block;
+    }
+
+    .nav-container{
+        position: fixed;
+        top:7vh;
+        right:0;
+        height:93vh;
+        background: #355e3b;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: 0.5s ease-in;
+    }
+
+    .hamburger{
+        display: flex;
+        width: 100%;
+    }
+    .middle-nav{
+        display:none;
+    }
+    .social-media{
+        display:none;
+    }
+    .end-nav{
+        display:none;
+    }
+}
+@media screen and (max-width: 960px) {
+  
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1pxsolid #fff;
+    position: absolute;
+    top: 80px;
+    left: -110%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: #1f5156;
+    left: 0px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+  .nav-item .active {
+    color: #ffdd40;
+    border: none;
+  }
+  .nav-links {
+    padding: 1.5rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #ffdd40;
+  }
+}
+*/
+
+a {
+    margin-right: 20px;
+    color:#fff;
+    text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+.navbar {
+  background:#fff;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  max-width: 1500px;
+}
+
+.main-container{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  
+}
+
+.nav-logo {
+  color: #000;
+  align-items: center;
+  margin-left: 70px;
+  cursor: pointer;
+  flex-grow: 1;
+  text-decoration: none;
+  font-size: 2rem;
+
+  font-weight: 600;
+}
+
+.nav-logo span{
+  color:rgb(0, 106, 255);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin-right: 2rem;
+}
+
+.nav-links {
+  color: #000;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+}
+.fa-code {
+  margin-left: 1rem;
+}
+.nav-links:hover{
+  color:rgb(0, 106, 255);
+}
+
+.nav-item {
+  line-height: 30px;
+  margin-right: .2rem;
+}
+
+
+
+.nav-item:hover {
+  color: rgb(0, 106, 255);
+  margin-right: 30px;
+  transition: .7s ease-in-out;
+}
+
+.nav-item.active {
+  color: rgb(0, 106, 255);
+  border: 1px solid rgb(0, 106, 255);
+}
+
+.nav-icon {
+  display: none;
+}
+
+.end-nav{
+    display: flex;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.login-nav a{
+    background-color: #fff;
+    color:#000;
+    padding: 15px 40px 15px 40px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-image: #000;
+}
+
+.signup a{
+    color:#fff;
+    border: none;
+    background-color:rgb(0, 106, 255) ;
+    padding: 15px 40px 15px 40px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    
+}
+
+.signup1{
+  color:#fff;
+  border: none;
+  background-color:rgb(0, 106, 255) ;
+  padding: 15px 40px 15px 40px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  cursor: pointer;
+  margin-right: 20px;
+  font-size: 15px;
+}
+
+.signup1:hover{
+  background-color: #fff;
+  color:#000;
+  transition: ease-in-out .5s;
+
+}
+
+button{
+  background-color: rgb(221, 197, 19);
+  font-weight: 600;
+  color:#fff;
+  font-size: 20px;
+}
+button:hover{
+  color:#000;
+  transition: .3s ease-in;
+  background-color: #fff;
+}
+
+
+@media screen and (max-width: 1024px) {
+  
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid #fff;
+    position: absolute;
+    top: 80px;
+    left: -110%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: #fff;
+    left: 0px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+  .nav-item .active {
+    color: rgb(0, 106, 255);
+    border: none;
+  }
+  .nav-links {
+    padding: 1.5rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: rgb(0, 106, 255);
+  }
+  .signup{
+    display: none;
+  }
+  .login-nav{
+    display: none;
+  }
+}
