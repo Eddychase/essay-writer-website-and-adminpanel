@@ -26,7 +26,7 @@ const Signup = () => {
   const handleClick = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8800/api/auth/register", credentials);
+      const res = await axios.post("https://essay-writer-server.onrender.com/api/auth/register", credentials);
       dispatch({ type: "REGISTER_SUCCESS", payload: res.data });
       
       navigate("/")

@@ -10,7 +10,7 @@ const Datatable = ({columns}) => {
   const location = useLocation();
   const path = location.pathname.split("/")[1];
   const [list, setList] = useState([]);
-  const { data, loading, error } = useFetch(`/${path}`);
+  const { data, loading, error } = useFetch(`https://essay-writer-server.onrender.com/api/${path}`);
 
   useEffect(() => {
     setList(data);
@@ -18,8 +18,10 @@ const Datatable = ({columns}) => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`/${path}/${id}`);
-      setList(list.filter((item) => item._id !== id));
+      await axios.delete(`https://essay-writer-server.onrender.com/api/${path}/${id}`);
+      if (list.length > 0) {
+        setList(list.filter((item) => item._id !== id));
+      }
     } catch (err) {}
   };
 

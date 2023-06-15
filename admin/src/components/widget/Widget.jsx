@@ -1,16 +1,35 @@
 import "./widget.scss";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
 
 const Widget = ({ type }) => {
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [totalPages, setTotalPages] = useState(0);
+  const [totalOrders, setTotalOrders] = useState(0);
   let data;
-
-  //temporary
-  const amount = 100;
+  // temporary
+  const amount = 3;
   const diff = 20;
+
+  useEffect(() => {
+    axios
+      .get("https://essay-writer-server.onrender.com/api/orders")
+      .then((response) => {
+        const orders = response.data;
+        console.log(orders);
+        const numOrders = orders.length;
+        setTotalOrders(numOrders);
+        const total = orders.reduce((acc, order) => acc + order.price, 0);
+        const totalPages = orders.reduce((acc, order) => acc + order.pages, 0);
+        setTotalPrice(total);
+        setTotalPages(totalPages);
+      })
+      .catch((error) => console.log(error));
+  }, [type]);
 
   switch (type) {
     case "user":
@@ -60,8 +79,8 @@ const Widget = ({ type }) => {
       break;
     case "balance":
       data = {
-        title: "BALANCE",
-        isMoney: true,
+        title: "TOTAL PAGES",
+        isMoney: false,
         link: "See details",
         icon: (
           <AccountBalanceWalletOutlinedIcon
@@ -83,17 +102,18 @@ const Widget = ({ type }) => {
       <div className="left">
         <span className="title">{data.title}</span>
         <span className="counter">
-          {data.isMoney && "$"} {amount}
+          {data.isMoney && "Ksh"}{" "}
+          {type === "order"
+            ? totalOrders
+            : type === "earning"
+            ? totalPrice
+            : type === "balance"
+            ? totalPages
+            : amount}
         </span>
         <span className="link">{data.link}</span>
       </div>
-      <div className="right">
-        <div className="percentage positive">
-          <KeyboardArrowUpIcon />
-          {diff} %
-        </div>
-        {data.icon}
-      </div>
+      <div className="right">{data.icon}</div>
     </div>
   );
 };

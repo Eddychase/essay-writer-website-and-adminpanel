@@ -203,7 +203,7 @@ const [show, setShow] = useState(false);
       price: 0 // You may need to calculate the price on the server
     };
     try {
-      const response = await fetch('http://localhost:8800/api/orders', {
+      const response = await fetch('https://essay-writer-server.onrender.com/api/orders', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json' // Set the content type of the request body

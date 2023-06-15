@@ -6,12 +6,12 @@ import { verifyAdmin, verifyToken, verifyUser } from "../utils/verifyToken.js";
 
 router.post("/",createOrder)
 
-router.put("/:id", verifyUser, updateOrder)
+router.put("/:id", updateOrder)
 
-router.delete("/:id", verifyUser, deleteOrder)
+router.delete("/:id", deleteOrder)
 
-router.get("/:id", verifyUser, getOrder)
+router.get("/:id",  getOrder)
 
-router.get("/", verifyUser, getOrders)
+router.get("/",  getOrders)
 
 export default router

@@ -1,4 +1,5 @@
 import "./chart.scss";
+import { useState, useEffect } from "react";
 import {
   AreaChart,
   Area,
@@ -8,16 +9,29 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const data = [
-  { name: "January", Total: 1200 },
-  { name: "February", Total: 2100 },
-  { name: "March", Total: 800 },
-  { name: "April", Total: 1600 },
-  { name: "May", Total: 900 },
-  { name: "June", Total: 1700 },
-];
-
 const Chart = ({ aspect, title }) => {
+  const [orders, setOrders] = useState([]);
+
+  useEffect(() => {
+    fetch("https://essay-writer-server.onrender.com/api/orders")
+      .then((response) => response.json())
+      .then((data) => setOrders(data));
+  }, []);
+
+  const chartData = [
+    { name: "January", Total: 0 },
+    { name: "February", Total: 0 },
+    { name: "March", Total: 0 },
+    { name: "April", Total: 0 },
+    { name: "May", Total: 0 },
+    { name: "June", Total: 0 },
+  ];
+
+orders.forEach((transaction) => {
+    const month = new Date(transaction.createdAt).getMonth();
+    chartData[month].Total += transaction.price;
+  });
+
   return (
     <div className="chart">
       <div className="title">{title}</div>
@@ -25,7 +39,7 @@ const Chart = ({ aspect, title }) => {
         <AreaChart
           width={730}
           height={250}
-          data={data}
+          data={chartData}
           margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
         >
           <defs>
