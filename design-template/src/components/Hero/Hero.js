@@ -214,11 +214,8 @@ const [credentials, setCredentials] = useState({
           </div>
       <div className="hero-text">
         <p> 
-          Magnam Deserunt Nostrum Accusamus. Nam Alias Sit Necessitatibus, 
-          Aliquid Ex Minima At!
-          Sharing a design concept landing page. Please share your feedback about this concept landing page 
-          in comments and follow me if you want to get more landing page ideas for Shopify, 
-          SaaS and Other Products.
+        Don't settle for subpar papers. Trust the professionals at [Website Name] to provide you with exceptional writing services. 
+        Get started today and experience the difference of professionally crafted papers that make an impact.
         </p>
       </div>
       <div className="hero-buttons">
@@ -232,11 +229,13 @@ const [credentials, setCredentials] = useState({
       <div className="hero-desc">
         <div className="desc-left">
           <h2>WHAT YOU GET</h2>
-          <p>Sharing a design concept landing page.Sharing a design concept landing page.</p>
+          <p>Our writers possess the skills to produce well-researched, 
+            original content.
+</p>
         </div>
         <div className="desc-right">
           <h2>WHAT YOU GET</h2>
-          <p>Sharing a design concept landing page.Sharing a design concept landing page.</p>
+          <p>Our commitment ensures that you can rely on us for all your writing needs.</p>
         </div>
       </div>
       </div>
