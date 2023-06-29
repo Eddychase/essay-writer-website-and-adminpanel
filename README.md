@@ -1,9 +1,19 @@
 # Essay Writer Website and Admin Panel
 
 This repository contains a web application that serves as an essay writer website with an accompanying admin panel. It provides a platform for users to submit essay requests and for administrators to manage and fulfill those requests efficiently.
-<div style="display: flex; justify-content: space-between;">
-    <img src="admin/public/adminhome.png" alt="Image 1" width="400">
-    <img src="admin/public/adminlist.png" alt="Image 2" width="400">
+
+
+<div style="display: flex; justify-content: center;">
+    <img src="admin/public/adminhome.png" alt="Image 1" width="450">
+    <img src="admin/public/adminlist.png" alt="Image 2" width="450">
+</div>
+
+
+
+
+<div style="display: flex; justify-content: center;">
+    <img src="admin/public/writerhp.png" alt="Image 1" width="450">
+    <img src="admin/public/writercheckout.png" alt="Image 2" width="450">
 </div>
 
 ## Features
